@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medos | Retsept Generator</title>
+  <link rel="stylesheet" href="./medos.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Medos</h1>
+          <p>Premium klinik retsept va tashxis yordamchisi</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div class="pill"><span class="dot"></span> Tizim tayyor</div>
+        <div class="pill">Smart dozalar</div>
+        <div class="pill">Protokol asosida</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="panel hero-left">
+        <div class="panel-inner">
+          <div class="eyebrow"><strong>Medos Pro</strong> · Retsept yozishni tezlashtiradi</div>
+          <h2><span>Tashxis</span> va <span>retsept</span> ishini bitta premium oynaga jamlaymiz.</h2>
+          <p class="lead">
+            Bemorga oid ma'lumotlar, tashxis tanlovi, dori tavsiyalari va vazn-yosh asosidagi doza hisobini
+            bir joyda ko'rish uchun yaratilgan zamonaviy klinik interfeys.
+          </p>
+
+          <div class="cta-row">
+            <button class="btn btn-primary" id="newPrescription" type="button">Yangi retsept</button>
+            <button class="btn btn-ghost" type="button">Protokollarni ko‘rish</button>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <b>128+</b>
+              <span>Tashxis kartalari</span>
+            </div>
+            <div class="stat">
+              <b>Smart</b>
+              <span>Doza tavsiyasi</span>
+            </div>
+            <div class="stat">
+              <b>Fast</b>
+              <span>Retsept generatori</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="mini-card">
+          <h3>Bugungi ustuvorliklar</h3>
+          <ul class="checklist">
+            <li><span class="check"></span><span>Bemor ma'lumotlarini silliq kiritish.</span></li>
+            <li><span class="check"></span><span>Tashxisga mos dori tavsiyalari.</span></li>
+            <li><span class="check"></span><span>Yosh va vaznga asoslangan hisob-kitob.</span></li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h3>Vizual yo‘nalish</h3>
+          <p>
+            Yorug' fon, shaffof panellar, yengil gradientlar va toza tipografika bilan klinik
+            ilovaga mos, ishonchli muhit yaratiladi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="panel">
+        <div class="panel-inner">
+          <div class="section-title">
+            <h3>Retsept formasi</h3>
+            <span>Bemorga mos yozuvlar va tavsiyalar</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="patient">Bemor F.I.Sh.</label>
+              <input id="patient" type="text" placeholder="Masalan: Karimov Anvar" />
+            </div>
+            <div class="field">
+              <label for="birthdate">Tug'ilgan sana</label>
+              <input id="birthdate" type="date" />
+            </div>
+            <div class="field">
+              <label for="weight">Vazn</label>
+              <input id="weight" type="text" placeholder="Masalan: 18 kg" />
+            </div>
+            <div class="field">
+              <label for="age">Yosh</label>
+              <input id="age" type="text" placeholder="Masalan: 6 yosh" />
+            </div>
+            <div class="field full">
+              <label for="diagnosis">Tashxis</label>
+              <select id="diagnosis">
+                <option value="" selected>Diagnostikadan tanlang</option>
+                <option>O'tkir respirator infeksiya</option>
+                <option>Allergik rinit</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="medicine">Dori yozish</label>
+              <textarea id="medicine" placeholder="Tizim shu tashxis uchun tavsiya qilingan dori va doza variantlarini ko'rsatadi..."></textarea>
+            </div>
+            <div class="field full">
+              <label for="recommendation">Tavsiya paneli</label>
+              <textarea id="recommendation" readonly placeholder="Tashxis tanlang va tavsiyalar shu yerda chiqadi."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="helpers">
+        <div class="mini-card">
+          <div class="section-title">
+            <h3>Avtomatik yordam</h3>
+            <span>Bir qarashda</span>
+          </div>
+          <div class="helper-card">
+            <strong>Podskazka paneli</strong>
+            <p>Tashxis tanlanganda mos dori ro'yxati ochiladi va xavfsiz doza intervallari ko'rsatiladi.</p>
+            <div class="tag-row">
+              <span class="tag brand">Dori tavsiya</span>
+              <span class="tag accent">Doza hisob</span>
+              <span class="tag good">Protokol</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-card">
+          <div class="section-title">
+            <h3>Qo'shimcha bloklar</h3>
+            <span>Kelajak uchun</span>
+          </div>
+          <div class="helper-card">
+            <strong>Diagnostika va eslatmalar</strong>
+            <p>Har bir tashxisga diagnostika, qo'shimcha ma'lumot va protokol kartalarini ulash mumkin.</p>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          Bu dizayn Medos uchun premium boshlang'ich holat. Keyingi bosqichda biz uni interaktiv
+          qilib, tashxis katalogi, dori bazasi va avtomatik doza hisoblashni qo'shamiz.
+        </div>
+
+        <div class="mini-card">
+          <div class="section-title">
+            <h3>Retsept natijasi</h3>
+            <span>Avtomatik preview</span>
+          </div>
+          <div class="helper-card">
+            <pre id="prescriptionPreview" style="margin:0; white-space:pre-wrap; font:inherit; color:inherit;">Hali retsept shakllanmagan.</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./medos-core.js"></script>
+  <script src="./tashxislar.js"></script>
+  <script src="./dorilar.js"></script>
+  <script src="./retsept.js"></script>
+  <script src="./sozlamalar.js"></script>
+  <script>
+    (function () {
+      const state = window.Medos.state;
+      const helpers = window.Medos.helpers;
+      const diagnosisSelect = helpers.byId("diagnosis");
+      const patientInput = helpers.byId("patient");
+      const birthdateInput = helpers.byId("birthdate");
+      const weightInput = helpers.byId("weight");
+      const ageInput = helpers.byId("age");
+      const medicineInput = helpers.byId("medicine");
+      const recommendation = helpers.byId("recommendation");
+      const preview = helpers.byId("prescriptionPreview");
+      const newPrescriptionButton = helpers.byId("newPrescription");
+
+      let lastSuggestedDrugId = null;
+
+      function getAgeValue() {
+        return ageInput.value.trim() || helpers.calculateAgeYears(birthdateInput.value);
+      }
+
+      function render() {
+        const diagnosis = window.Medos.diagnoses.find((item) => item.name === diagnosisSelect.value);
+        const drug = diagnosis ? window.Medos.drugs.find((item) => diagnosis.drugIds.includes(item.id)) : null;
+        state.patient = patientInput.value.trim();
+        state.diagnosisId = diagnosis ? diagnosis.id : null;
+        state.selectedDrugs = drug ? [drug.id] : [];
+
+        if (!diagnosis) {
+          recommendation.value = "Tashxis tanlang. Shunda tizim tavsiyalarni chiqaradi.";
+          preview.textContent = "Hali retsept shakllanmagan.";
+          lastSuggestedDrugId = null;
+          return;
+        }
+
+        const dose = helpers.calculateDose(drug, weightInput.value, getAgeValue());
+        const doseBlock = dose.message
+          ? dose.message
+          : [
+              `Kunlik doza: ${helpers.formatDoseRange(dose.minDailyDose, dose.maxDailyDose)}`,
+              `Bir martalik doza: ${helpers.formatDoseRange(dose.singleDoseMin, dose.singleDoseMax)}`,
+              `Qabul soni: kuniga ${dose.frequencyPerDay} mahal`,
+              dose.warnings && dose.warnings.length ? `Ogohlantirish: ${dose.warnings.join(" ")}` : "Ogohlantirish: yo'q"
+            ].join("\n");
+        const drugBlock = drug
+          ? `${drug.name} | ${drug.form} | ${drug.strength}\nDoza qoidasi: ${drug.doseRule}\nMaksimum: ${drug.maxDose}\nYosh cheklovi: ${drug.ageLimits}\nEslatma: ${drug.notes}`
+          : "Ushbu tashxis uchun dori topilmadi.";
+
+        recommendation.value = [
+          `Tashxis: ${diagnosis.name}`,
+          `Protokol: ${diagnosis.protocol}`,
+          `Diagnostika: ${diagnosis.diagnostics}`,
+          "",
+          drugBlock,
+          "",
+          doseBlock
+        ].join("\n");
+
+        preview.textContent = window.Medos.prescription.build({
+          patient: state.patient,
+          diagnosis,
+          drug,
+          weight: weightInput.value,
+          age: getAgeValue()
+        });
+
+        if (drug && lastSuggestedDrugId !== drug.id) {
+          medicineInput.value = `${drug.name} tavsiya qilinadi.\n${drug.form}, ${drug.strength}`;
+          lastSuggestedDrugId = drug.id;
+        }
+      }
+
+      ["change", "input"].forEach((evt) => {
+        diagnosisSelect.addEventListener(evt, render);
+        patientInput.addEventListener(evt, render);
+        birthdateInput.addEventListener(evt, render);
+        weightInput.addEventListener(evt, render);
+        ageInput.addEventListener(evt, render);
+      });
+
+      newPrescriptionButton.addEventListener("click", () => {
+        patientInput.value = "";
+        birthdateInput.value = "";
+        weightInput.value = "";
+        ageInput.value = "";
+        diagnosisSelect.value = "";
+        medicineInput.value = "";
+        lastSuggestedDrugId = null;
+        render();
+        patientInput.focus();
+      });
+
+      render();
+    }());
+  </script>
+</body>
+</html>
