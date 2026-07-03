@@ -15,6 +15,7 @@ supabase/
 - Production schema faqat migration orqali o'zgaradi.
 - RLS barcha bemor/tibbiy tablelarda yoqiladi.
 - Backend service-role bilan yozadi, lekin frontend access uchun policylar alohida ko'rib chiqiladi.
+- GitHub integration production branch `main` va working directory `.` orqali ulanadi.
 
 ## Tekshiruv
 
